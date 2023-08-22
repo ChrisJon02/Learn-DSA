@@ -29,13 +29,15 @@ public class BubbleSort {
     }
     // Recursive Approach
     public static void recursiveSort(int[] arr, int n) {
-        //Your code goes here
         if (n==1) return;
+        boolean isSwapped = false;
         for(int j = 0; j <= n-2; j++){
             if(arr[j] > arr[j+1]){
                 swap(arr, j, j+1);
+                isSwapped = true;
             }
         }
+        if(isSwapped == false) return;
         recursiveSort(arr, n-1);
         
     }
