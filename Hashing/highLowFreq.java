@@ -3,10 +3,9 @@ import java.util.Arrays;
 public class highLowFreq {
     public static void main(String[]args){
         int[] arr = {2, 3, 4, 3, 6, 1, 3};
-       int[] v = getFrequencies(arr);
-        System.out.println(Arrays.toString(v));
+       getFrequencies(arr);
     }
-    public static int[] getFrequencies(int[] v) {
+    public static void getFrequencies(int[] v) {
         int[] arr = new int[2];
         Map<Integer, Integer> map = new HashMap<>();
         
@@ -42,6 +41,6 @@ public class highLowFreq {
         
         arr[0] = maxNum;
         arr[1] = minNum;
-        return arr;
+        System.out.println(Arrays.toString(arr));
     }
 }

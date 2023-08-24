@@ -4,7 +4,6 @@ public class SelectionSort{
         int[] arr = {15, 27, 13, 6, 87, 4};
         int n = arr.length;
         iterativeSort(arr, n);
-        System.out.println(Arrays.toString(arr));
     }
     // Iterative Approach
     public static void iterativeSort(int[] arr, int n) {
@@ -18,6 +17,7 @@ public class SelectionSort{
             } 
            swap(arr, i, min);
         }
+        System.out.println(Arrays.toString(arr));
     }
     public static void swap(int[] arr, int p1, int p2){
         int temp = arr[p1];

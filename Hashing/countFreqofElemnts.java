@@ -23,9 +23,7 @@ public class countFreqofElemnts {
             int ans = iterativeFreq(arr, n, input[i]);
             System.out.println("Frequency of " +input[i]+ " is " +ans);
         }
-        System.out.println("Output by using Hash Array Approach is :");
         hashArrayFreq(arr, n);
-        System.out.println("Output by using HashMap Approach is : ");
         hashMapFreq(arr, n);
         sc.close();
     }
@@ -46,6 +44,7 @@ public class countFreqofElemnts {
         for(int i = 0; i<n; i++){
             hash[arr[i]]++;
         }
+         System.out.println("Output by using Hash Array Approach is :");
          System.out.println(Arrays.toString(hash));
     }
     //HashMap Approach
@@ -58,6 +57,7 @@ public class countFreqofElemnts {
                 map.put(arr[i], 1);
             }
          }
+         System.out.println("Output by using HashMap Approach is : ");
          for (HashMap.Entry<Integer,Integer> entry : map.entrySet())
          {
             System.out.println(entry.getKey() + " " + entry.getValue());

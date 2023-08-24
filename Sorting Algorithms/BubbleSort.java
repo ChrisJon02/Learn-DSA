@@ -4,9 +4,7 @@ public class BubbleSort {
     public static void main(String[]args){
         int[] arr = {15, 27, 13, 6, 87, 4};
         int n = arr.length;
-        System.out.println("Using Iterative approach : ");
         iterativeSort(arr, n);
-        System.out.println(Arrays.toString(arr));
         System.out.println("Using Recursive Approach : ");
         int[] recArr = {15, 27, 13, 6, 87, 4};
         recursiveSort(recArr, n);
@@ -26,6 +24,8 @@ public class BubbleSort {
                 break;
             }
         }
+        System.out.println("Using Iterative approach : ");
+        System.out.println(Arrays.toString(arr));
     }
     // Recursive Approach
     public static void recursiveSort(int[] arr, int n) {

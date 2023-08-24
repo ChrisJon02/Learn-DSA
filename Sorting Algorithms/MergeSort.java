@@ -1,6 +1,21 @@
 import java.util.*;
 
 public class MergeSort {
+    public static void main(String args[]) {
+        int n = 5;
+        int arr[] = {3, 1, 2, 4, 3};
+        System.out.println("Before sorting array: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        mergeSort(arr, 0, n - 1);
+        System.out.println("After sorting array: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
     private static void merge(int[] arr, int low, int mid, int high) {
         ArrayList<Integer> temp = new ArrayList<>(); // temporary array
         int left = low;      // starting index of left half of arr
@@ -43,21 +58,6 @@ public class MergeSort {
         mergeSort(arr, low, mid);  // left half
         mergeSort(arr, mid + 1, high); // right half
         merge(arr, low, mid, high);  // merging sorted halves
-    }
-    public static void main(String args[]) {
-        int n = 5;
-        int arr[] = {3, 1, 2, 4, 3};
-        System.out.println("Before sorting array: ");
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-        mergeSort(arr, 0, n - 1);
-        System.out.println("After sorting array: ");
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
     }
 
 }

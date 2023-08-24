@@ -4,9 +4,7 @@ public class countFreqCharInStr {
     public static void main(String[] args) {
 	    String str = "abacdbfghf";
 	    int n = str.length();
-		System.out.println("Using hash array approach : ");
 		hashAArrayChar(str, n);
-		System.out.println("Using hashmap approach : ");
 		hashFreqChar(str, n);
 
 	}
@@ -16,6 +14,7 @@ public class countFreqCharInStr {
 	    for(int i = 0; i<n; i++){
 	        hash[str.charAt(i) - 97]++;
 	    }
+		System.out.println("Using hash array approach : ");
 	    System.out.println(Arrays.toString(hash));
 	}
 	// Using Hashmap Approach
@@ -28,6 +27,7 @@ public class countFreqCharInStr {
 	           map.put(str.charAt(i), 1);
 	       }
 	   }
+	   System.out.println("Using hashmap approach : ");
 	    for (HashMap.Entry<Character, Integer> entry : map.entrySet())
          {
             System.out.println(entry.getKey() + " " + entry.getValue());

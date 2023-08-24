@@ -4,7 +4,6 @@ public class InsertionSort {
         int[] arr1 = {5,4,3,2,1};
         int n = arr1.length;
         iterativeSort(arr1, n);
-        System.out.println("Using Iterative Approach : " +Arrays.toString(arr1));
         int[] arr2 = {5,4,3,2,1};
         recursiveSort1(arr2, n);
         System.out.println("Using Recursive Approach 1 : " +Arrays.toString(arr2));
@@ -21,6 +20,7 @@ public class InsertionSort {
                 j--;
             }
         }
+        System.out.println("Using Iterative Approach : " +Arrays.toString(arr));
     }
     // Recursive Approach method-1
     public static void recursiveSort1(int[] arr, int n){
