@@ -11,7 +11,8 @@ public class FindMissingNumber {
           int n = arr.length;
           bruteForce(arr, n);
           System.out.println("Using Better Approach, missing number: " +betterApproach(arr));
-          optimal(arr);
+          optimal1(arr);
+          optimal2(arr);
     }
  
     // Time Complexity: O(N^2)
@@ -50,7 +51,7 @@ public class FindMissingNumber {
     // Time Complexity : O(N)
     // Space Complexity : O(1)
     // Summation approach
-    static void optimal(int[] arr){
+    static void optimal1(int[] arr){
         int n = arr.length;
         int s1 = (n*(n+1))/2;
         int s2 = 0;
@@ -58,7 +59,22 @@ public class FindMissingNumber {
             s2 = s2+arr[i];
         }
         int ans = s1-s2;
-        System.out.println("Using optimal approach, missing number : " +ans);
+        System.out.println("Using optimal approach (summation), missing number : " +ans);
+    }
+    
+    // Time Complexity : O(N)
+    // Space Complexity : O(1)
+    static void optimal2(int[] arr){
+        int n = arr.length;
+        int xor1 = 0, xor2 = 0;
+
+        for (int i = 0; i < n; i++) {
+            xor2 = xor2 ^ arr[i]; 
+            xor1 = xor1 ^ (i); 
+        }
+        xor1 = xor1 ^ n; 
+
+        System.out.println("Using optimal approach (XOR) : " + (xor1 ^ xor2));
     }
     
 }
